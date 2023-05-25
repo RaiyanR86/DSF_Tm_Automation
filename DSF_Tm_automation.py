@@ -4,7 +4,7 @@
 # Step 2: Make sure source workbook cells are values only and not formulas;
 # you can ensure this by copying all the values over to a new sheet and pasting Values
 # Step 3: Set file name for destination file within the string in dest_filename variable, line 25
-# Step 4: Run program and input all variables as requested
+# Step 4: Run program and input all variables as requested ("recommended" variables are for Input_Dataset only)
 # Note: If destination file is already open, please close it before running the program,
 # otherwise program will not be able to access destination file
 
@@ -29,8 +29,11 @@ ws1 = wb2.active
 ws1.title = 'Tm data'
 
 # Sets number of compounds, number of titrations, and number of rows
-compound_count = int(input("Enter number of compounds to be tested (For this dataset, enter 3): "))
-titration_count = int(input("Enter number of titrations used (For this dataset, enter 5): "))
+compound_count = int(input("Enter number of compounds to be tested (For Input_Dataset, enter 3): "))
+titration_count = int(input("Enter number of titrations used (For Input_dataset, enter 5): "))
+row_count = int(input("Enter number of data points used for first derivative plot (For Input_Dataset, enter 121): "))
+max_Tm_count = 5
+
 conc_list = []
 for conc_ind in range(titration_count):
     conc = round(float(input('Enter concentration {} of {}, in uM (lowest to highest, excluding apo): '.format(conc_ind + 1, titration_count))),2)
@@ -38,8 +41,6 @@ for conc_ind in range(titration_count):
     # Allows user to fill in concentrations until required number of titrations is reached
 conc_list.insert(0, round(float(0), 2))
 conc_count = len(conc_list)
-row_count = 121
-max_Tm_count = 5
 
 tem_min = float(input('Enter temperature lower bound for Tm determination, in °C (default 55): '))
 tem_max = float(input('Enter temperature upper bound for Tm determination, in °C (default 80): '))
