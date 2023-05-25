@@ -1,4 +1,4 @@
-# DSF_Tm_Automation
+# DSF Tm Automation
  A Python automation script for deriving and storing melting point (Tm) data from Differential Scanning Fluorimetry (DSF) first-derivative plots for protein-small molecule binding.
 
 Differential scanning fluorimetry (DSF) is a biophysical "thermal shift" technique used for examining how a protein unfolds when it is steadily heated over a controlled temperature range. One of its applications is the detection of ligands (which can be small molecules or other proteins) that bind to the target protein. As the ligand binds to the protein, it changes the _melting point_ (T<sub>m</sub>) of the protein, defined as the temperature at which 50% of the protein is in the folded state and 50% is in the unfolded state. This shift in T<sub>m</sub> (∆T<sub>m</sub>) varies based on many factors, including the structure and concentration of the ligand ([Gao et al. 2020](https://link.springer.com/article/10.1007/s12551-020-00619-2)).
@@ -12,4 +12,3 @@ Steps for using the code:
 2. (Optional) Downloading the ![Input_Dataset.xlsx](https://github.com/RaiyanR86/DSF_Tm_Automation/blob/main/Input_Dataset.xlsx) and ![Output_File.xlsx](https://github.com/RaiyanR86/DSF_Tm_Automation/blob/main/Output_File.xlsx) files will provide help in formatting the user data. (Make sure data is for first derivative and not raw data. Also make sure source workbook cells are values only and not formulas.)
 3. In lines 20 and 25 of the script, type in input and output file names in the requested format. Make sure input file is in same folder as Python script.
 4. Run program and input all variables as requested ("recommended" variables are for Input_Dataset only). (NOTE: If destination file is already open, please close it before running the program, otherwise program will not be able to access destination file.)
-5. Once "Destination file ready" prompt shows, open output file and hit enter on the Python script window to generate the plots. The plots can be compared with the output file to check whether the desired T<sub>m</sub>'s have been taken from the curve.
