@@ -179,3 +179,4 @@ for comp_ind in range(compound_count):          # 64 loops for 64 compounds
     plt.show()      # Shows all plots for each compound
 
 print("All plots generated. End of program.")
+end = input("Hit enter to terminate.")
