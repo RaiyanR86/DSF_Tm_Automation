@@ -1,4 +1,4 @@
-# DSF_Tm_Automation
+# DSF Tm Automation
  A Python automation script for deriving and storing melting point (Tm) data from Differential Scanning Fluorimetry (DSF) first-derivative plots for protein-small molecule binding.
 
 Differential scanning fluorimetry (DSF) is a biophysical "thermal shift" technique used for examining how a protein unfolds when it is steadily heated over a controlled temperature range. One of its applications is the detection of ligands (which can be small molecules or other proteins) that bind to the target protein. As the ligand binds to the protein, it changes the _melting point_ (T~m~) of the protein, defined as the temperature at which 50% of the protein is in the folded state and 50% is in the unfolded state. This shift in T~m (∆T~m~) varies based on many factors, including the structure and concentration of the ligand ([Gao et al. 2020](https://link.springer.com/article/10.1007/s12551-020-00619-2)).
